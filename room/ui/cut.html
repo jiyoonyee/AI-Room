@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../style/index-style.css" />
+    <link rel="stylesheet" href="../style/cut-style.css" />
   </head>
   <body>
     <header>
@@ -12,8 +12,15 @@
     <section>
       <p>조기 퇴실 신청</p>
       <label for="number">이름,학번: </label>
-      <input type="text" class="text" />
+      <input type="text" class="text" placeholder="EX)10101,OOO"/>
       <button>신청하기</button>
     </section>
+    <script>
+      const btn = document.querySelector("button")
+      btn.addEventListener("click",()=>{
+        alert("성공적으로 조기 퇴실 되었습니다.")
+        location.href = "list.html"
+      })
+    </script>
   </body>
 </html>

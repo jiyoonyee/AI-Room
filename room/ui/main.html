@@ -26,10 +26,16 @@
     </section>
     <script>
       const form = document.querySelector(".form");
+      const btn = document.querySelector(".btn")
       form.addEventListener("submit", (e) => {
+        console.log(e.preventDefault())
         e.preventDefault();
-        window.location.href = "/list.html";
+        window.location.href = "list.html";
       });
+
+      btn.addEventListener("click",()=>{
+        location.href = "list.htESml"
+      })
     </script>
   </body>
 </html>
