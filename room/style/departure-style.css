@@ -21,6 +21,7 @@ header {
  }
  body{
    background-color: #f4f4f4;
+   overflow: hidden;
  }
  section{
     display: flex;
