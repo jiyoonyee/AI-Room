@@ -12,15 +12,16 @@
     <section>
       <p>조기 퇴실 신청</p>
       <label for="number">이름,학번: </label>
-      <input type="text" class="text" placeholder="EX)10101,OOO"/>
+      <input type="text" class="text" placeholder="EX)10101,OOO" />
       <button>신청하기</button>
     </section>
     <script>
-      const btn = document.querySelector("button")
-      btn.addEventListener("click",()=>{
-        alert("성공적으로 조기 퇴실 되었습니다.")
-        location.href = "list.html"
-      })
+      const btn = document
+        .querySelector("button")
+        .addEventListener("click", () => {
+          alert("성공적으로 조기 퇴실 되었습니다.");
+          location.href = "list.html";
+        });
     </script>
   </body>
 </html>
