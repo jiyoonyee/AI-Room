@@ -11,11 +11,22 @@
         <h1>A.I 융합실 퇴실 사진</h1>
       </header>
       <section>
-        <label for="number">학번 : </label>
-        <input type="text" />
-        <label for="name">이름 : </label>
-        <input type="text" />
-        <input type="file" />
+        <div class="main">
+          <div>
+            <label for="number">학번 : </label>
+            <input id="number" type="text" name="School-number"/>
+            <label for="name">이름 : </label>
+            <input id="name" type="text" name="name"/>
+          </div>
+          <div class="upload-file">
+            <label for="img-file">
+              <div>이미지 업로드</div>
+            </label>
+            <button>파일 업로드</button>
+            <input id="img-file" type="file">
+          </div>
+        </div>
+        
       </section>
       
     </div>
