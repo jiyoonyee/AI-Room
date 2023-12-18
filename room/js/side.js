@@ -1,20 +1,46 @@
 const openSide = document.querySelector(".open")
-const openSideArrow = document.querySelector(".open>p")
+const openSideMobile = document.querySelector(".open-mobile")
+const openSideArrowWeb = document.querySelector(".open>p")
+const openSideArrowMobile = document.querySelector(".open-mobile>i")
 const sideMenu = document.querySelector("aside")
 let rotateArrow = 1
 let openclose = false;
 openSide.addEventListener("click",()=>{
   if(openclose === false){
-    sideMenu.style.transform = "translateX(0%)"
+    sideMenu.style.transform = "translateX(0%) translateY(0%)"
     openclose = true;
-    openSideArrow.style.transform = `rotate(${180*rotateArrow}deg)`
+    openSideArrowWeb.style.transform = `rotate(${180*rotateArrow}deg)`
     rotateArrow++
   }
   else if(openclose === true){
-    sideMenu.style.transform = "translateX(-100%)"
+    sideMenu.style.transform = "translateX(-100%) translate(0%)"
     openclose = false
-    openSideArrow.style.transform = `rotate(${180*rotateArrow}deg)`
+    openSideArrowWeb.style.transform = `rotate(${180*rotateArrow}deg)`
     rotateArrow++
   }
-  
 })
+
+openSideMobile.addEventListener("click",()=>{
+  if(openclose === false){
+    sideMenu.style.transform = "translateX(0%) translateY(-100%)"
+    openclose = true;
+    openSideArrowMobile.style.transform = `rotate(${180*rotateArrow}deg)`
+    rotateArrow++
+  }
+  else if(openclose === true){
+    sideMenu.style.transform = "translateX(0%) translateY(0%)"
+    openclose = false
+    openSideArrowMobile.style.transform = `rotate(${180*rotateArrow}deg)`
+    rotateArrow++
+  }
+})
+
+window.addEventListener("keydown",(e)=>{
+  if(e == "F12"){
+    sideMenu.style.transform = "translateX(0%) translateY(0%)"
+    rotateArrow = 1
+    openclose = false;
+  }
+})
+
+
